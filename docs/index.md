@@ -15,6 +15,6 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
-# Welcome to Your Name's Course Notes
+# Welcome to Krisha's Course Notes
 
-This is my home page. I will use it to organize and share my course notes.
+This is my home page. I will use it to organize and share my course notes. 
