@@ -4,6 +4,6 @@
 
 * Reviewer: [Kiara Smith](https://github.com/kiaras4)
 
-!!! note
+!!! tip
 
     Feeling discouraged? Refer back to this tutorial!
