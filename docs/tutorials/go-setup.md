@@ -4,9 +4,6 @@
 
 * Reviewer: [Kiara Smith](https://github.com/kiaras4)
 
-``` py
-This codeblock is to show you what a codeblock looks like.
-```
 
 **Welcome!** This tutorial will help you create a "Hello, World!" using the language Go.
 
@@ -39,7 +36,7 @@ First, we will need to create a directory and initialize our repisitory on GitHu
     cd <name-of-directory>
     ```
 
-3. Initalize your new Git repository.
+3. Initalize your Git repository.
 
     ```
     git init
@@ -55,32 +52,33 @@ First, we will need to create a directory and initialize our repisitory on GitHu
 
 Now that we have our local repository setup, let's create our GitHuB repository:
 
-1. Log into your GitHub account and head straight to the Create a New Repository page here.
+1. Log into your GitHub account and click on the Create a New Repository page.
 
-2. Fill in the following details:
+2. Fill in the following details for your new repsitory:
 
     Repository Name: hello-comp423-go
 
     Description: "Hello COMP423 in Go"
 
     Visibility: Public
-3. Do not initialize the repository with a README, .gitignore, or license
+
+3. Do not initialize your repository with a README, .gitignore, or license
 
 4. Click Create Repository
 
-We can now onnect out local and remote repositories.
+We can now connect our local and remote repositories.
 
-1. Add GitHub repository as a remote:
+1. Add GitHub repository as a remote repository:
 
     ```
     git remote add origin https://github.com/<your-username>/hello-comp423-go.git
     ```
 
-    Change ``<your-username>`` with the username you have set up in GitHub.
+    Change ``<your-username>`` with the username of your GitHub.
 
-2. Ensure your default branch name is ``main`` by using ``git branch`` in your terminal. If it's not ``main``, rename it using ``git branch -M main``.
+2. Ckeck to see if your default branch is ``main`` by using ``git branch`` in your terminal. If it's not ``main``, rename it using ``git branch -M main``.
 
-3. Push local commits to your GitHub repository
+3. Push local commits to your GitHub 
 
     ```
     git push --set-upstream origin main
@@ -92,7 +90,7 @@ We can now onnect out local and remote repositories.
 
         * ``-u`` is the short flag of ``--set-upstream``
 
-4. Using ``git log`` in your terminally will show you the commit ID and message. This should match the ID of the most recent commit on your GitHub after you reload it.
+4. Using ``git log`` in your terminal will show you the commit ID. Check to see if this matches the ID of the most recent commit on your GitHub after you reload it.
 
 ## Part 2: Development(Dev) Container Set Up and Configuration
 
@@ -101,7 +99,7 @@ We can now onnect out local and remote repositories.
 1. Open the directory you created in VS Code.
     - Can be done like so: File > Open folder
 
-2. Create a .devcontainer directory at the root of the project with a file name "devcontainer.json" Path should look like this:
+2. Create a directory named .devcontainer at the root of the project with a file inside of it named "devcontainer.json". The path should look like this:
 
     ```
     .devcontainer/devcontainer.json
@@ -109,13 +107,13 @@ We can now onnect out local and remote repositories.
 
 ### Configuration
 
-The devcontainer.json file you just created defines the configuration needed for your development environment. We will be adding the following specification:
+The devcontainer.json file you just created defines the configuration needed for your development environment. We will need to add the following into the file.
 
-1. **name:** descriptive name for the dev container
+1. **name:** This will give a descriptive name for your dev container
 
 2. **image:** This specifies the Docker image to use. We will use one of Microsoft's base images of the latest version of a Go environment.
 
-3. **customizations:** Adds important & useful configurations to VS Code, such as installing the Go extension. Searching for VSCode extensions on the marketplace will bring up the string identifier of each extension in its sidebar. Adding extensions this way is important as it ensures other developers on your project will have those extensions installed in their own dev containers automatically. 
+3. **customizations:** Adds important & useful configurations to VS Code, such as installing the Go extension. Searching for VSCode extensions on the marketplace will bring up the string identifier of each extension in its sidebar. 
 
     ```
     {
@@ -134,9 +132,9 @@ The devcontainer.json file you just created defines the configuration needed for
 
 ### Post-Configuration - Reopen Project in a VS Code Dev Container
 
-Here we will reopen the project in the container. You can do this by doing ``Ctrl+Shift+P`` (or ``Cmd+Shift+P`` on Mac), then type "Dev Containers: Reopen in Container," selecting the option once it comes up. The image will be downloaded and any requirements installed. It may take a few minutes.
+Here we will reopen the project in the container. You can do this by doing ``Ctrl+Shift+P`` (or ``Cmd+Shift+P`` on Mac), then type "Dev Containers: Reopen in Container," and select it. The image will be downloaded and any requirements installed. It is normal for it to take a few minutes.
 
-Once the setup is complete, close the current terminal tab by pressing the trash can button. Open a new terminal in VS Code and run ``go version`` to ensure the dev container is running a recent version of Go. 
+Once the setup is complete, you should close the current terminal tab by pressing the trash can button. Open a new terminal in VS Code and run ``go version`` to check if the dev container is running a recent version of Go. 
 
 !!! success
 
@@ -201,8 +199,22 @@ In this code we first declared a main package. Then we import the  fmt package, 
     ```
     go run .
     ```
+6. Build subcommand as an Alternative
+Instead of usuing go run we can use go build. For this option, instead of manually making the hello.go file you would run: 
 
-#### Congratulations! You ran your first program using Go!
+    ```
+    go build main.go
+    ```
+
+This command compiles the Go program and generates a binary executable file. Then on this file copy and paste the code that was provided in step 4. To run the file run the code:
+
+    ```
+    ./hello
+    ```
+
+This option is similar to the gcc command. Both commands complie to generate a binary file. Then you run the binary manually. ```go build``` is different then ```go run``` because it creates a complied binary. 
+
+#### Congratulations! You have created your first program using Go!
 
 !!! info
 
