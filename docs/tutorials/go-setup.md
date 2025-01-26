@@ -48,7 +48,7 @@ First, we will need to create a directory and initialize our repisitory on GitHu
 4. Create a README file:
 
     ```
-    echo "# Hello Comp423 in Rust" > README.md
+    echo "# Hello Comp423 in Go" > README.md
     git add .
     git commit -m "Initial commit with README"
     ```
@@ -58,9 +58,9 @@ Now that we have our local repository setup, let's create our GitHuB repository:
 1. Log into your GitHub account and head straight to the Create a New Repository page here.
 2. Fill in the following details:
 
-    Repository Name: hello-comp423-rust
+    Repository Name: hello-comp423-go
 
-    Description: "Hello COMP423 in Rust"
+    Description: "Hello COMP423 in Go"
 
     Visibility: Public
 3. Do not initialize the repository with a README, .gitignore, or license
@@ -71,7 +71,7 @@ We can now onnect out local and remote repositories.
 1. Add GitHub repository as a remote:
 
 ```
-git remote add origin https://github.com/<your-username>/hello-world-rust.git
+git remote add origin https://github.com/<your-username>/hello-comp423-go.git
 ```
 
 Change ``<your-username>`` with the username you have set up in GitHub.
@@ -105,9 +105,9 @@ The devcontainer.json file you just created defines the configuration needed for
 
 1. **name:** descriptive name for the dev container
 
-2. **image:** This specifies the Docker image to use. We will use one of Microsoft's base images of the latest version of a Rust environment.
+2. **image:** This specifies the Docker image to use. We will use one of Microsoft's base images of the latest version of a Go environment.
 
-3. **customizations:** Adds important & useful configurations to VS Code, such as installing the Rust extension. Searching for VSCode extensions on the marketplace will bring up the string identifier of each extension in its sidebar. Adding extensions this way is important as it ensures other developers on your project will have those extensions installed in their own dev containers automatically. 
+3. **customizations:** Adds important & useful configurations to VS Code, such as installing the Go extension. Searching for VSCode extensions on the marketplace will bring up the string identifier of each extension in its sidebar. Adding extensions this way is important as it ensures other developers on your project will have those extensions installed in their own dev containers automatically. 
 
     ```
     {
@@ -177,4 +177,4 @@ In this code we first declared a main package. Then we import the  fmt package, 
     go run .
     ```
 
-#### Congratulations! You ran your first program using Rust!
+#### Congratulations! You ran your first program using Go!
