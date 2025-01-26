@@ -56,6 +56,7 @@ First, we will need to create a directory and initialize our repisitory on GitHu
 Now that we have our local repository setup, let's create our GitHuB repository:
 
 1. Log into your GitHub account and head straight to the Create a New Repository page here.
+
 2. Fill in the following details:
 
     Repository Name: hello-comp423-go
@@ -64,25 +65,32 @@ Now that we have our local repository setup, let's create our GitHuB repository:
 
     Visibility: Public
 3. Do not initialize the repository with a README, .gitignore, or license
+
 4. Click Create Repository
 
 We can now onnect out local and remote repositories.
 
 1. Add GitHub repository as a remote:
 
-```
-git remote add origin https://github.com/<your-username>/hello-comp423-go.git
-```
+    ```
+    git remote add origin https://github.com/<your-username>/hello-comp423-go.git
+    ```
 
-Change ``<your-username>`` with the username you have set up in GitHub.
+    Change ``<your-username>`` with the username you have set up in GitHub.
 
 2. Ensure your default branch name is ``main`` by using ``git branch`` in your terminal. If it's not ``main``, rename it using ``git branch -M main``.
 
 3. Push local commits to your GitHub repository
 
-```
-git push --set-upstream origin main
-```
+    ```
+    git push --set-upstream origin main
+    ```
+
+    !!!question "What's --set-upstream?"
+
+        ``--set-upstream`` allows us to makes the main branch track the remote branch. This allows future pushed and pulls to be done without needing to specify the branch name. So, when working on your local main branch, you can use ``git push origin``.
+
+        * ``-u`` is the short flag of ``--set-upstream``
 
 4. Using ``git log`` in your terminally will show you the commit ID and message. This should match the ID of the most recent commit on your GitHub after you reload it.
 
@@ -130,6 +138,13 @@ Here we will reopen the project in the container. You can do this by doing ``Ctr
 
 Once the setup is complete, close the current terminal tab by pressing the trash can button. Open a new terminal in VS Code and run ``go version`` to ensure the dev container is running a recent version of Go. 
 
+!!! success
+
+    You should see a similar version in the output as seen below:
+
+    ```
+    go version go1.23.4 linux/amd64
+    ```
 
 
 
@@ -140,7 +155,7 @@ We will now be writing a Hello Comp423 program using Go.
 1. Run these command lines
 
     ```
-    cargo new hello_comp423 --vcs none
+    mkdir hello_comp423
     cd hello_comp423
     ```
 
@@ -148,33 +163,49 @@ We will now be writing a Hello Comp423 program using Go.
 
  2. Enable dependency tracking for your code.
 
- Now we will need to enable dependency tracking for your code by creating a go.mod file. When your code imports packages contained in other modules, you manage those dependencies through your code's own module. 
- Run the following: 
+    Now we will need to enable dependency tracking for your code by creating a go.mod file. When your code imports packages contained in other modules, you manage those dependencies through your code's own module. 
 
-```
+    Run the following: 
+
+    ```
     go mod init example/hello_comp423_students
     ```
 
+    !!! success
+
+        You should see this output in your terminal:
+
+        ``go: creating new go.mod: module example/hello_comp423_students``
+
 3. In your text editor, create a file hello.go in which to write your code.
+
+!!!note
+    The hello.go file should be placed in the hello_comp423 directory that was made in step 1 of this section.
 
 4. Paste the folllowing code into the hello.go file
 
-```
+    ```
     package main
 
     import "fmt"
 
     func main() {
         fmt.Println("Hello Comp423")
-}
+    }
     ```
 
 In this code we first declared a main package. Then we import the  fmt package, which contains functions for formatting text, including printing to the console. Then we implement a main function which will print Hello Comp423 to the console.
 
 5. Run your code
 
-```
+    ```
     go run .
     ```
 
 #### Congratulations! You ran your first program using Go!
+
+!!! info
+
+    The first part of this tutorial was inspired by the "Starting a Static Website Project with MkDocs by Kris Jordan" page on the Comp423 website. 
+
+    The documentation that was used to create the Hello Comp423 program was inspired by a website called "Go." The documentation can be found here: https://go.dev/doc/tutorial/getting-started
