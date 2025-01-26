@@ -55,7 +55,7 @@ First, we will need to create a directory and initialize our repisitory on GitHu
 
 Now that we have our local repository setup, let's create our GitHuB repository:
 
-1. Log into your GitHub account and head straight to the Create a New Repository page here.
+1. Log into your GitHub account and head straight to the Create a New Repository page.
 2. Fill in the following details:
 
     Repository Name: hello-comp423-go
@@ -140,7 +140,7 @@ We will now be writing a Hello Comp423 program using Go.
 1. Run these command lines
 
     ```
-    cargo new hello_comp423 --vcs none
+    mkdir hello_comp423
     cd hello_comp423
     ```
 
@@ -151,7 +151,7 @@ We will now be writing a Hello Comp423 program using Go.
  Now we will need to enable dependency tracking for your code by creating a go.mod file. When your code imports packages contained in other modules, you manage those dependencies through your code's own module. 
  Run the following: 
 
-```
+    ```
     go mod init example/hello_comp423_students
     ```
 
@@ -159,7 +159,7 @@ We will now be writing a Hello Comp423 program using Go.
 
 4. Paste the folllowing code into the hello.go file
 
-```
+    ```
     package main
 
     import "fmt"
@@ -173,7 +173,7 @@ In this code we first declared a main package. Then we import the  fmt package, 
 
 5. Run your code
 
-```
+    ```
     go run .
     ```
 
