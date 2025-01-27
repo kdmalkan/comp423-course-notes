@@ -177,8 +177,8 @@ We will now be writing a Hello Comp423 program using Go.
 
 3. In your text editor, create a file hello.go in which to write your code.
 
-!!!note
-    The hello.go file should be placed in the hello_comp423 directory that was made in step 1 of this section.
+    !!!note
+        The hello.go file should be placed in the hello_comp423 directory that was made in step 1 of this section.
 
 4. Paste the folllowing code into the hello.go file
 
@@ -192,7 +192,7 @@ We will now be writing a Hello Comp423 program using Go.
     }
     ```
 
-In this code we first declared a main package. Then we import the  fmt package, which contains functions for formatting text, including printing to the console. Then we implement a main function which will print Hello Comp423 to the console.
+    In this code we first declared a main package. Then we import the  fmt package, which contains functions for formatting text, including printing to the console. Then we implement a main function which will print Hello Comp423 to the console.
 
 5. Run your code
 
@@ -200,19 +200,19 @@ In this code we first declared a main package. Then we import the  fmt package, 
     go run .
     ```
 6. Build subcommand as an Alternative
-Instead of usuing go run we can use go build. For this option, instead of manually making the hello.go file you would run: 
+    Instead of usuing go run we can use go build. For this option, instead of manually making the hello.go file you would run: 
 
-    ```
-    go build main.go
-    ```
+        ```
+        go build main.go
+        ```
 
-This command compiles the Go program and generates a binary executable file. Then on this file copy and paste the code that was provided in step 4. To run the file run the code:
+    This command compiles the Go program and generates a binary executable file. Then on this file copy and paste the code that was provided in step 4. To run the file run the code:
 
-    ```
-    ./hello
-    ```
+        ```
+        ./hello
+        ```
 
-This option is similar to the gcc command. Both commands complie to generate a binary file. Then you run the binary manually. ```go build``` is different then ```go run``` because it creates a complied binary. 
+    This option is similar to the gcc command. Both commands complie to generate a binary file. Then you run the binary manually. ```go build``` is different then ```go run``` because it creates a complied binary. 
 
 #### Congratulations! You have created your first program using Go!
 
